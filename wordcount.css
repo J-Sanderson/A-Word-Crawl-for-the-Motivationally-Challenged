@@ -1,0 +1,34 @@
+textarea {
+  font-family:'courier new', monospace;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#howmuch {
+  text-align:center;
+}
+
+#counter {
+  text-align:center;
+  width:100px;
+  margin-left:auto;
+  margin-right:auto;
+  border:1px solid black;
+}
+
+#donebut {
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+}
+
+.inactivebut {
+  color:#c0c0c0;
+  cursor:not-allowed;
+}
+
+.activebut {
+  color:black;
+  cursor:pointer;
+}
