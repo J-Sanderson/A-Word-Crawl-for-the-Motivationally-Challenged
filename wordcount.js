@@ -1,3 +1,4 @@
+const PERCENTAGE_STEP = 3.33;
 var goalList = [10,15,25,50,75,100,100,75,100,110,120,125,150,100,125,150,120,100,80,60,50,75,100,150,200,175,150,125,100,150];
 //declare the goal variable here to avoid scope errors in textHandler
 var goal;
@@ -18,7 +19,7 @@ function getWordCount(input) {
   }
 }
 
-function textHandler(counter) {
+function textHandler(counter, progress) {
   
   //have you reached the end of the goal list?
   if (counter >= goalList.length) {
@@ -58,8 +59,15 @@ function textHandler(counter) {
       $('#donebut').removeClass('activebut').addClass('inactivebut');
       //iterate counter
       counter++;
+      //set percentage for progress bar
+      //last segment needs to be set to 100% as the step is technically 3.33 recurring
+      var percentage = counter > 29? 100 + '%' : progress + '%';
+      //animate progress bar
+      $('#prog').animate({'width': percentage}, 1000);
+      //iterate progress for the next round
+      progress = progress + PERCENTAGE_STEP;
       //start again with new goal
-      textHandler(counter);
+      textHandler(counter, progress);
     }
   });
   }
@@ -73,7 +81,17 @@ function finish() {
 $(document).ready(function(){
   
   var counter = 0;
+  var progress = PERCENTAGE_STEP;
   
-  textHandler(counter);
+  textHandler(counter, progress);
+  
+  //progress bar on/off
+  $( 'input[name="progbar"]:radio' ).change(function() {
+    if ($('#progon').is(':checked')) {
+      $('#progwrapper').removeClass('invisible');
+    } else {
+      $('#progwrapper').addClass('invisible');
+    }
+  });
   
 });

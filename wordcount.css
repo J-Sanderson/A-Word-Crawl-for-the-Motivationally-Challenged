@@ -9,6 +9,18 @@ textarea {
   text-align:center;
 }
 
+#progwrapper {
+  border:1px solid black;
+  height:30px;
+  margin-bottom:10px;
+}
+
+#prog {
+  width:0%;
+  height:30px;
+  background-color:red;
+}
+
 #counter {
   text-align:center;
   width:100px;
@@ -31,4 +43,8 @@ textarea {
 .activebut {
   color:black;
   cursor:pointer;
+}
+
+.invisible {
+  display:none;
 }
