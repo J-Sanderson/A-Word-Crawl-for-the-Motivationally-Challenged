@@ -1,7 +1,6 @@
 const PERCENTAGE_STEP = 3.33;
 var goalList = [10,15,25,50,75,100,100,75,100,110,120,125,150,100,125,150,120,100,80,60,50,75,100,150,200,175,150,125,100,150];
-//declare the goal variable here to avoid scope errors in textHandler
-var goal;
+var goal; //avoids scope errors in textHandler
 
 function getWordCount(input) {
   //whitespace management (from writtenkitten.co)
@@ -92,6 +91,18 @@ $(document).ready(function(){
     } else {
       $('#progwrapper').addClass('invisible');
     }
+  });
+  
+  //display about box
+  $('#about').click(function() {
+    $('#overlay').show();
+    $('#aboutbox').show();
+  });
+  
+  //hide about box
+  $('#close').click(function() {
+    $('#overlay').hide();
+    $('#aboutbox').hide();
   });
   
 });
