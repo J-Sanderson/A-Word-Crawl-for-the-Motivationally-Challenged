@@ -1,29 +1,39 @@
 /*http://paletton.com/#uid=7142w0kaC2RdcY3avkIffi6rmv-*/
 
+:root {
+  --darkbrown: #17140F;
+  --tan: #A5956F;
+  --lightblue: #7D91A4;
+  --midblue: #4B5B6B;
+  --darkgrey: #0A0C0F;
+  --progress: #2264A3;
+  --inactive: #90744C
+}
+
 body {
-  background-color:#17140F;
+  background-color: var(--darkbrown);
   font-family:Arial, Helvetica, sans-serif;
-  color:#A5956F;
+  color: var(--tan);
 }
 
 h1 {
   text-align:center;
-  color:#7D91A4;
+  color: var(--lightblue);
 }
 
-a:link, a:visited {
-  color:#4B5B6B;
+a {
+  color: var(--midblue);
 }
 
 hr {
   width:70%;
-  background-color:#4B5B6B;
+  background-color: var(--midblue);
   height:1px;
   border:none;
 }
 
 button {
-  background-color:#A5956F;
+  background-color: var(--tan);
   margin-left:auto;
   margin-right:auto;
   display:block;
@@ -69,9 +79,8 @@ button:active, button:focus, textarea:focus {
 
 #aboutbox {
   display:none;
-  background-color:#A5956F;
-  color:#17140F;
-  border:1px solid black;
+  background-color: var(--tan);
+  color: var(--darkbrown);
   position:fixed;
   width:60%;
   left: 50%;
@@ -93,8 +102,8 @@ button:active, button:focus, textarea:focus {
 }
 
 #progwrapper {
-  border:1px solid #0A0C0F;
-  background-color:#A5956F;
+  border:1px solid var(--darkgrey);
+  background-color: var(--tan);
   height:30px;
   margin-bottom:20px;
 }
@@ -102,7 +111,7 @@ button:active, button:focus, textarea:focus {
 #prog {
   width:0%;
   height:30px;
-  background-color:#2264A3;
+  background-color: var(--progress);
 }
 
 .invisible {
@@ -113,9 +122,9 @@ button:active, button:focus, textarea:focus {
 
 textarea {
   font-family:'courier new', monospace;
-  background-color:#A5956F;
-  color:#0A0C0F;
-  border:1px solid #0A0C0F;
+  background-color: var(--tan);
+  color: var(--darkgrey);
+  border:1px solid var(--darkgrey);
   display:block;
   margin-left:auto;
   margin-right:auto;
@@ -128,9 +137,9 @@ textarea {
   width:100px;
   margin-left:auto;
   margin-right:auto;
-  background-color:#A5956F;
-  border:1px solid #0A0C0F;
-  color:#0A0C0F;
+  background-color: var(--tan);
+  border:1px solid var(--darkgrey);
+  color: var(--darkgrey);
   margin-bottom:15px;
   font-size:120%;
 }
@@ -140,12 +149,12 @@ textarea {
 }
 
 .inactivebut {
-  color:#90744C;
+  color: var(--inactive);
   cursor:not-allowed;
 }
 
 .activebut {
-  color:#0A0C0F;
+  color: var(--darkgrey);
 }
 
 @media screen and (max-width: 700px) {
