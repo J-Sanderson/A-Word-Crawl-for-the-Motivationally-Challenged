@@ -46,7 +46,69 @@
 <div id="counter">
   0
 </div>
-<button id='donebut' class='inactivebut'>Done!</button>
+<button id='donebut' class='inactivebut'>Done!</button<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>A Word Crawl for the Motivationally Challenged!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/wordcount.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/wordcount.js" defer></script>
+  </head>  
+  <body>
+    
+    <div id="overlay"></div>
+      
+    <div id="wrapper">
+          
+      <div id="aboutbox">
+        
+        <p class="right"><span id="close">X</span></p>
+        <p>Welcome to the Word Crawl for the Motivationally Challenged (or anyone who wants a push to get some words out)!</p>
+        <p>This challenge is derived from a popular <a href="http://www.nanowrimo.org">NaNoWriMo</a> thread. You will be prompted to write words in small chunks - no more than 200 at a time, and often much less. By the time you're done, the chunks will have added up to at least 3,000 words - double your daily NaNoWriMo goal!</p>
+        <p>Go ahead and enjoy your writing!</p>
+        <p class="right">-J. Sanderson</p>
+        
+      </div>
+
+      <h1>A Word Crawl for the Motivationally Challenged!</h1>
+
+      <button id="about">About</button>
+
+      <p class="center"><strong>Warning:</strong> This page does not save your words! Always copy-paste them somewhere safe before you leave.</p>
+
+      <form id="progbar" class="center">
+        Progress bar:<br>
+        <input type="radio" name="progbar" id="progon" value="on" checked> On<br>
+        <input type="radio" name="progbar" id="progoff" value="off"> Off<br>
+      </form>
+
+      <hr>
+
+      <p id="howmuch"></p>
+
+      <div id="progwrapper">
+        <div id="prog">
+        </div>
+      </div>
+
+      <textarea rows="10" cols="90">
+      </textarea>
+          
+      <div id="counter">
+        0
+      </div>
+          
+      <button id="donebut" class="inactivebut">Done!</button>
+      
+    </div>
+  
+    <div id="done"></div>
+    
+  </body>
+</html>
 </div>
   
 <div id='done'></div>
