@@ -1,69 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>A Word Crawl for the Motivationally Challenged!</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/wordcount.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="/wordcount.js" defer></script>
-  </head>  
-  <body>
-    
-    <div id="overlay"></div>
-      
-    <div id="wrapper">
-          
-      <div id="aboutbox">
-        
-        <p class="right"><span id="close">X</span></p>
-        <p>Welcome to the Word Crawl for the Motivationally Challenged (or anyone who wants a push to get some words out)!</p>
-        <p>This challenge is derived from a popular <a href="http://www.nanowrimo.org">NaNoWriMo</a> thread. You will be prompted to write words in small chunks - no more than 200 at a time, and often much less. By the time you're done, the chunks will have added up to at least 3,000 words - double your daily NaNoWriMo goal!</p>
-        <p>Go ahead and enjoy your writing!</p>
-        <p class="right">-J. Sanderson</p>
-        
-      </div>
+<html>
+<head>
+<title>A Word Crawl for the Motivationally Challenged</title>
+<link rel="stylesheet" type="text/css" href="wordcount.css" media="screen" />
+<script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script  type="text/javascript" src="wordcount.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
-      <h1>A Word Crawl for the Motivationally Challenged!</h1>
+  <div id="overlay"></div>
 
-      <button id="about">About</button>
+  <div id="wrapper">
 
-      <p class="center"><strong>Warning:</strong> This page does not save your words! Always copy-paste them somewhere safe before you leave.</p>
-
-      <form id="progbar" class="center">
-        Progress bar:<br>
-        <input type="radio" name="progbar" id="progon" value="on" checked> On<br>
-        <input type="radio" name="progbar" id="progoff" value="off"> Off<br>
-      </form>
-
-      <hr>
-
-      <p id="howmuch"></p>
-
-      <div id="progwrapper">
-        <div id="prog">
-        </div>
-      </div>
-
-      <textarea rows="10" cols="90">
-      </textarea>
-          
-      <div id="counter">
-        0
-      </div>
-          
-      <button id="donebut" class="inactivebut">Done!</button>
-      
+    <div id="aboutbox" class="modal">
+      <p class="right"><span id="close">X</span></p>
+      <p>Welcome to the Word Crawl for the Motivationally Challenged (or anyone who wants a push to get some words out)!</p>
+      <p>This challenge is derived from a popular <a href="http://www.nanowrimo.org">NaNoWriMo</a> thread. You will be prompted to write words in small chunks - no more than 200 at a time, and often much less. By the time you're done, the chunks will have
+        added up to at least 3,000 words - double your daily NaNoWriMo goal!</p>
+      <p>Go ahead and enjoy your writing!</p>
+      <p class="right">-J. Sanderson</p>
     </div>
-  
-    <div id="done"></div>
-    
-  </body>
-</html>
-</div>
-  
-<div id='done'></div>
+
+    <div id="storagebox" class="modal">
+      <p>Switching this on will use your browser's <a href="https://en.wikipedia.org/wiki/Web_storage">local storage</a> to store your progress and written words as you type for safekeeping in case you accidentally close or navigate away from the page. Your writing is only stored in your browser, on your machine, and does not leave it - I have no access to what you wrote and nor does the website this page is hosted on. It is not shared with any other sites in any way, and they can't access your words either.</p>
+      <p>Remember this is not a substitute for copy-pasting your words in another document - always remember to do that when you're done.</p>
+      <p>If you'd like to enable local storage, click OK, else click Cancel. To clear local storage later, switch this setting to Off.</p>
+      <button id="storeok">OK</button>
+      <button id="storecancel">Cancel</button>
+    </div>
+
+    <h1>A Word Crawl for the Motivationally Challenged!</h1>
+
+    <button id="about">About</button>
+
+    <p class="center"><strong>Warning:</strong> This page does not, by default, save your words! Always copy-paste them somewhere safe before you leave. If you'd like to use your browser's local storage to save your words, check "Save words to local storage" below.</p>
+
+    <form id="storage" class="center">
+      Save words to local storage:<br />
+      <input type="radio" name="storage" id="storeon" value="on"> On<br>
+      <input type="radio" name="storage" id="storeoff" value="off" checked> Off<br>
+    </form>
+
+    <form id="progbar" class="center">
+      Progress bar:<br />
+      <input type="radio" name="progbar" id="progon" value="on" checked> On<br>
+      <input type="radio" name="progbar" id="progoff" value="off"> Off<br>
+    </form>
+
+    <hr>
+
+    <p id="howmuch"></p>
+
+    <div id="progwrapper">
+      <div id="prog">
+      </div>
+    </div>
+
+    <textarea rows="10" cols="90">
+        </textarea>
+
+    <div id="counter">
+      0
+    </div>
+
+    <button id="donebut" class="inactivebut">Done!</button>
+
+  </div>
+
+  <div id="done"></div>
 
 </body>
 </html>

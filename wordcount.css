@@ -50,6 +50,10 @@ button {
   margin-right:auto;
 }
 
+form {
+  margin: 5px;
+}
+
 button:active, button:focus, textarea:focus {
   outline: none;
 }
@@ -68,16 +72,16 @@ button:active, button:focus, textarea:focus {
 
 #overlay {
   display:none;
-  background-color:rgba(0, 0, 0, 0.6); 
+  background-color:rgba(0, 0, 0, 0.6);
   width:100%;
-  height:100%; 
+  height:100%;
   z-index:10;
-  top:0; 
-  left:0; 
-  position:fixed; 
+  top:0;
+  left:0;
+  position:fixed;
 }
 
-#aboutbox {
+.modal {
   display:none;
   background-color: var(--tan);
   color: var(--darkbrown);
@@ -87,7 +91,15 @@ button:active, button:focus, textarea:focus {
   margin-left: -30%;
   z-index:20;
   padding: 0px 10px;
-  border-radius:10px;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.modal button {
+  display: inline-block;
+  background-color: var(--midblue);
+  color: #fff;
+  margin: 10px;
 }
 
 #close {
